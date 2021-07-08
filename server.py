@@ -11,5 +11,5 @@ s.listen(5)                 # Now wait for client connection.
 while True:
    c, addr = s.accept()     # Establish connection with client.
    print 'Got connection from', addr
-   c.send('Hello from python')
+   c.send('Hello from python !')
    c.close()                # Close the connection
