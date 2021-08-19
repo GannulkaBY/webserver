@@ -1,0 +1,31 @@
+- name: Run hadolint with reviewdog
+  # You may pin to the exact commit or the version.
+  # uses: reviewdog/action-hadolint@2f466836cfde85549162798baa829b896485f4af
+  uses: reviewdog/action-hadolint@v1
+  with:
+    # GITHUB_TOKEN
+    github_token: # optional, default is ${{ github.token }}
+    # Hadolint flags. (hadolint <hadolint_flags>)
+    hadolint_flags: # optional, default is 
+    # List of ignored rules. (hadolint --ignore RULE1 --ignore RULE2)
+    hadolint_ignore: # optional, default is 
+    # Tool name to use for reviewdog reporter
+    tool_name: # optional, default is hadolint
+    # List of files and folders to exclude
+    exclude: # optional, default is 
+    # Report level for reviewdog [info,warning,error]
+    level: # optional, default is error
+    # Reporter of reviewdog command [github-pr-check,github-pr-review].
+Default is github-pr-check.
+
+    reporter: # optional, default is github-pr-check
+    # Filtering mode for the reviewdog command [added,diff_context,file,nofilter].
+Default is added.
+
+    filter_mode: # optional, default is added
+    # Exit code for reviewdog when errors are found [true,false]
+Default is `false`.
+
+    fail_on_error: # optional, default is false
+    # Additional reviewdog flags
+    reviewdog_flags: # optional, default is 
